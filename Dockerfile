@@ -81,13 +81,8 @@ RUN source ~/.bashrc
 RUN bahmni install
 
 # Then start the services, might need to start individually.
-RUN sudo service mysqld start
-RUN sudo service postgresql-9.2 start
-RUN sudo service openmrs start
-RUN sudo service httpd start
-RUN sudo service bahmni-reports start
-RUN sudo service bahmni-lab start
-RUN sudo service openerp start
-RUN sudo service bahmni-erp-connect start
-RUN sudo service atomfeed-console start
-RUN sudo service pacs-integration start
+# The installation should be done in about 15 - 30 minutes depending on your internet speed.
+# Verify installed components using the command:
+COPY start.sh /start.sh #### u can try using alternative.sh instead of start which will install bahmni during runtime.
+RUN chmod +x /start.sh
+CMD ["/start.sh"]
