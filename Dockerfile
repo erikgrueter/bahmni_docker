@@ -56,7 +56,7 @@ RUN yum install openssh-server -y
 ## Install Mandriva, The HTTP worked (see Mandriva Error above, scroll down the page to Webster's answer
 ## If this breaks, the most likely solution is that you need to set the variable mx_download_url in etc/bahmni-installer/setup.yml
 # RUN yum install http://195.220.108.108/linux/Mandriva/devel/cooker/x86_64/media/contrib/release/mx-1.4.5-1-mdv2012.0.x86_64.rpm -y
-RUN RUN printf "mx_download_url: http://195.220.108.108/linux/Mandriva/devel/cooker/x86_64/media/contrib/release/mx-1.4.5-1-mdv2012.0.x86_64.rpm" >> /etc/bahmni-installer/setup.yml
+RUN printf "\nmx_download_url: http://195.220.108.108/linux/Mandriva/devel/cooker/x86_64/media/contrib/release/mx-1.4.5-1-mdv2012.0.x86_64.rpm" >> /etc/bahmni-installer/setup.yml
 
 ## Install Bahmni command line tool
     #   This command installs the latest command line tool,
