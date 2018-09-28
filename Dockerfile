@@ -70,6 +70,8 @@ RUN yum install yum install https://dl.bintray.com/bahmni/rpm/rpms/bahmni-instal
 RUN curl -L https://goo.gl/R8ekg5 >> /etc/bahmni-installer/setup.yml
 ##
 
+ENV BAHMNI_INVENTORY local
+
 ## Set the inventory file name to local in BAHMNI_INVENTORY environment variable.
    #    This way you won't need to use the '-i local' switch every time you use the 'bahmni' command
    #    You can also configure custom inventory file instead of local.
